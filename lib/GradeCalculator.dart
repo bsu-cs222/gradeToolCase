@@ -8,8 +8,10 @@ class GradeCalculator {
       return 'C';
     } else if (i >= 60) {
       return 'D';
-    } else {
+    } else if (i <= 59) {
       return 'F';
+    } else {
+      return 'no letter grade';
     }
   }
 }
