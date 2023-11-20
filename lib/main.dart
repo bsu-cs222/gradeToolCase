@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gradetool/GradeCalculator.dart';
+import 'package:gradetool/grade_calculator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      home: MyCustomForm(),
+      home: const MyCustomForm(),
     );
   }
 }
