@@ -4,7 +4,6 @@ import 'package:test/test.dart';
 void main() {
   final calculator = GradeCalculator();
 
-  // Define the common code outside of the individual test cases
   void grade(int numericGrade, String expectedLetterGrade) {
     final result = calculator.calculateGrade(numericGrade);
     expect(result, expectedLetterGrade);
