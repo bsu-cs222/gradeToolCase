@@ -1,17 +1,17 @@
 class GradeCalculator {
-  String letterGrade(int i) {
-    if (i >= 90) {
-      return 'A';
-    } else if (i >= 80) {
-      return 'B';
-    } else if (i >= 70) {
-      return 'C';
-    } else if (i >= 60) {
-      return 'D';
-    } else if (i <= 59) {
-      return 'F';
-    } else {
-      return 'no letter grade';
-    }
+  final Map<int, String> grades = {
+    90: 'A',
+    80: 'B',
+    70: 'C',
+    60: 'D',
+    0: 'F',
+  };
+
+  String calculateGrade(int numericGrade) {
+    return grades.entries
+        .firstWhere(
+          (entry) => numericGrade >= entry.key,
+    )
+        .value;
   }
 }
